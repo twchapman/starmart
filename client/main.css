@@ -1,4 +1,136 @@
 body {
   padding: 10px;
   font-family: sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+  display: grid;
+  grid-template-areas: "logo account";
+  width: 100%;
+}
+
+header > h1 {
+  grid-area: "logo";
+}
+
+header .account {
+  grid-area: "account";
+  text-align: right;
+}
+
+.landing {
+  margin: auto;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  max-width: 1200px;
+}
+
+.landing-buttons > button {
+  margin: 0 20px;
+}
+
+button {
+  position: relative;
+  background: none;
+  color: #fff;
+  padding: 15px 30px;
+  /* padding-left: 45px; */
+  border: 0;
+  font-size: 1.2em;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+/* button::after {
+  content:" ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: block;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transform-origin: left bottom;
+  transform:skew(-20deg);
+} */
+
+button:hover {
+  color: #111;
+  background: #fff;
+}
+
+button:hover::after {
+  background: #fff;
+}
+
+input, select {
+  border: 0;
+  background: #111;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.sell-new {
+  margin: auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sell-new-item-modal {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  background-color: #161616;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  left: 50px;
+  right: 50px;
+  top: 50px;
+  bottom: 50px;
+}
+
+.sell-new-item-modal .tile {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.hidden {
+  visibility: hidden;;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+}
+
+.autocomplete-box {
+  position: absolute;
+  max-height: 10em;
+  overflow-y: scroll;
+  top: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.autocomplete-option {
+  padding: 10px;
+}
+
+.autocomplete-option:hover {
+  background: #444;
 }

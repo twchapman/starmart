@@ -1,31 +1,34 @@
 import { Meteor } from 'meteor/meteor';
-import { LinksCollection } from '/imports/api/links';
+import { populateEquipment } from './import-items';
+import { ItemsCollection } from '../imports/api/items';
 
 function insertLink(title: string, url: string) {
-  LinksCollection.insert({ title, url, createdAt: new Date() });
+  ItemsCollection.insert({ title, url, createdAt: new Date() });
 }
 
 Meteor.startup(() => {
-  // If the Links collection is empty, add some data.
-  if (LinksCollection.find().count() === 0) {
-    insertLink(
-      'Do the Tutorial',
-      'https://www.meteor.com/tutorials/react/creating-an-app'
-    );
+  populateEquipment();
 
-    insertLink(
-      'Follow the Guide',
-      'http://guide.meteor.com'
-    );
+  // // If the Links collection is empty, add some data.
+  // if (LinksCollection.find().count() === 0) {
+  //   insertLink(
+  //     'Do the Tutorial',
+  //     'https://www.meteor.com/tutorials/react/creating-an-app'
+  //   );
 
-    insertLink(
-      'Read the Docs',
-      'https://docs.meteor.com'
-    );
+  //   insertLink(
+  //     'Follow the Guide',
+  //     'http://guide.meteor.com'
+  //   );
 
-    insertLink(
-      'Discussions',
-      'https://forums.meteor.com'
-    );
-  }
+  //   insertLink(
+  //     'Read the Docs',
+  //     'https://docs.meteor.com'
+  //   );
+
+  //   insertLink(
+  //     'Discussions',
+  //     'https://forums.meteor.com'
+  //   );
+  // }
 });
