@@ -1,5 +1,4 @@
 import { Head } from "$fresh/runtime.ts";
-import Counter from "../islands/Counter.tsx";
 import Searchbar from "../islands/Searchbar.tsx";
 
 export default function Home() {
