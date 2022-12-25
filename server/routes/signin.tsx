@@ -42,7 +42,7 @@ const denoGrant = new DenoGrant({
         provider: Providers.discord,
         client_id: Deno.env.get("CLIENT_ID")!,
         client_secret: Deno.env.get("CLIENT_SECRET")!,
-        redirect_path: "/auth/discord/callback",
+        redirect_path: "/auth/discord",
         scope: "identify",
     }]
 });
